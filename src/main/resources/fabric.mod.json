@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "memecraft",
+  "version": "${version}",
+  "name": "MemeCraft Universe",
+  "description": "Meme universe: motor, casino, hamster, anomaly, worm, mimic, RK phone, deck, luck button, encyclopedia.",
+  "authors": ["Example"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.memecraft.MemeCraftMod"],
+    "client": ["com.example.memecraft.client.MemeCraftClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
