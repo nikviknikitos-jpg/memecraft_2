@@ -46,7 +46,7 @@ public class WormParasiteEntity extends PathAwareEntity {
             if (target instanceof LivingEntity le) {
                 le.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 100, 1));
             }
-            getWorld().playSound(null, getBlockPos(), SoundEvents.ENTITY_SILVERFISH_ATTACK,
+            getWorld().playSound(null, getBlockPos(), SoundEvents.ENTITY_SILVERFISH_HURT,
                     SoundCategory.HOSTILE, 1f, 1f);
             return true;
         }
