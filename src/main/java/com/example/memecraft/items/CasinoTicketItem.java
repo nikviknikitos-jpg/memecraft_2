@@ -1,4 +1,5 @@
 package com.example.memecraft.items;
+import net.minecraft.entity.player.PlayerEntity;
 
 import com.example.memecraft.entities.ModEntities;
 import net.minecraft.block.Blocks;
