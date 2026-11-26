@@ -5,6 +5,7 @@ import com.example.memecraft.entities.ModEntities;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.render.entity.BipedEntityRenderer;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
@@ -30,8 +31,8 @@ public class MemeCraftClient implements ClientModInitializer {
                 return new Identifier("memecraft", "textures/entity/player_mimic.png");
             }
         });
-        EntityRendererRegistry.register(ModEntities.HAMSTER, ctx -> new BipedEntityRenderer<com.example.memecraft.entities.HamsterEntity, net.minecraft.client.render.entity.model.RabbitEntityModel<com.example.memecraft.entities.HamsterEntity>>(
-                ctx, new net.minecraft.client.render.entity.model.BipedEntityModel<>(ctx.getPart(EntityModelLayers.RABBIT)), 0.5f) {
+        EntityRendererRegistry.register(ModEntities.HAMSTER, ctx -> new BipedEntityRenderer<com.example.memecraft.entities.HamsterEntity, BipedEntityModel<com.example.memecraft.entities.HamsterEntity>>(
+                ctx, new BipedEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER)), 0.4f) {
             @Override
             public Identifier getTexture(com.example.memecraft.entities.HamsterEntity e) {
                 return new Identifier("memecraft", "textures/entity/hamster.png");
