@@ -51,7 +51,7 @@ public class SlotMachineBlock extends Block {
                         sp.sendMessage(net.minecraft.text.Text.literal("§cМини-взрыв!"), false);
                     }
                 }
-                sw.playSound(null, pos, SoundEvents.BLOCK_NOTE_BLOCK_PLING, SoundCategory.BLOCKS, 1f, 1.4f);
+                sw.playSound(null, pos, SoundEvents.BLOCK_NOTE_BLOCK_PLING.value(), SoundCategory.BLOCKS, 1f, 1.4f);
             }
         }
         return ActionResult.SUCCESS;
