@@ -30,8 +30,8 @@ public class MemeCraftClient implements ClientModInitializer {
                 return new Identifier("memecraft", "textures/entity/player_mimic.png");
             }
         });
-        EntityRendererRegistry.register(ModEntities.HAMSTER, ctx -> new MobEntityRenderer<com.example.memecraft.entities.HamsterEntity, net.minecraft.client.render.entity.model.RabbitEntityModel<com.example.memecraft.entities.HamsterEntity>>(
-                ctx, new net.minecraft.client.render.entity.model.RabbitEntityModel<>(ctx.getPart(EntityModelLayers.RABBIT)), 0.5f) {
+        EntityRendererRegistry.register(ModEntities.HAMSTER, ctx -> new BipedEntityRenderer<com.example.memecraft.entities.HamsterEntity, net.minecraft.client.render.entity.model.RabbitEntityModel<com.example.memecraft.entities.HamsterEntity>>(
+                ctx, new net.minecraft.client.render.entity.model.BipedEntityModel<>(ctx.getPart(EntityModelLayers.RABBIT)), 0.5f) {
             @Override
             public Identifier getTexture(com.example.memecraft.entities.HamsterEntity e) {
                 return new Identifier("memecraft", "textures/entity/hamster.png");
